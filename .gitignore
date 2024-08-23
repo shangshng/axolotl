@@ -182,3 +182,13 @@ submit.sh
 
 typings/
 out/
+
+# pickle
+*.pkl
+*.pth
+*.pt
+*.bin
+*.model
+
+# Json
+*.json

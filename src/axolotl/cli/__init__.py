@@ -143,6 +143,8 @@ def do_merge_lora(
 
     LOG.info("running merge of LoRA with base model")
     model = model.merge_and_unload(progressbar=True)
+    LOG.info("merged LoRA with base model")
+    LOG.info(str(model))
     try:
         model.to(dtype=cfg.torch_dtype)
     except RuntimeError:
