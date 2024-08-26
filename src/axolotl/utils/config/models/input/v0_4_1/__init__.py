@@ -695,6 +695,18 @@ class AxolotlInputConfig(
     is_mistral_derived_model: Optional[bool] = Field(default=None)
     is_qwen_derived_model: Optional[bool] = Field(default=None)
 
+    medusa_num_heads: Optional[int] = None
+    medusa_num_layers: Optional[int] = None
+    medusa_heads_coefficient: Optional[float] = None
+    medusa_decay_coefficient: Optional[float] = None
+    medusa_logging: Optional[bool] = None
+    medusa_scheduler: Optional[str] = None
+    medusa_only_heads: Optional[bool] = None
+    medusa_num_unfreeze_layers: Optional[int] = None
+    medusa_lr_multiplier: Optional[float] = None
+    medusa_distillation_regularization: Optional[float] = None
+    medusa_self_distillation: Optional[bool] = None
+
     @field_validator("datasets", mode="before")
     @classmethod
     def fix_sharegpt_datasets(cls, datasets):

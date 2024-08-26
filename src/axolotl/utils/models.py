@@ -915,9 +915,9 @@ def load_model(
     if cfg.medusa_num_heads is not None:
         from transformers import LlamaForCausalLM, MistralForCausalLM
 
-        assert isinstance(
-            model, (LlamaForCausalLM, MistralForCausalLM)
-        ), "Medusa is only supported for Llama and Mistral models for now"
+        # assert isinstance(
+        #     model, (LlamaForCausalLM, MistralForCausalLM)
+        # ), "Medusa is only supported for Llama and Mistral models for now"
 
         LOG.info(
             f"using Medusa with {cfg.medusa_num_heads} heads, {cfg.medusa_num_layers} layers, {cfg.medusa_decay_coefficient} decay coefficient, {cfg.medusa_heads_coefficient} heads coefficient, {cfg.medusa_scheduler} scheduler, {cfg.medusa_logging} logging"
